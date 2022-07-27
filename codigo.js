@@ -1,42 +1,27 @@
-//crea un algoritmo con un condicional
+// bienvenida
+alert("Bienvenido/a a Tienda Roma Libreria")
 
-
-let musica=prompt("Aprobaste o desaprobaste la evaluacion de musica?");
-let danza=prompt("Aprobaste o desaprobaste la evaluacion de danza? ");
-
-if ((musica=="aprobe") && (danza=="aprobe")){
-    console.log( "Felicidades!!Pasaste al siguiente año en la Escuela de artes"
-    )
-}
-else if ((musica=="desaprobe") && (danza=="aprobe")){
-    console.log( "Deberas rendir nuevamente musica"
-)
-}
-else if ((musica=="aprobe") && (danza=="desaprobe")){
-    console.log( "Deberas rendir nuevamente danza"
-)
-}
-else if ((musica=="desaprobe") && (danza=="desaprobe")){
-    console.log( "Lo sentimos, deberas rendir nuevamente ambas materias para pasar al siguiente año"
-    )
-}
-
-
+// usuario
+let usuario=prompt("Ingresa tu nombre");
+alert( "Bienvenido/a a nuestra tienda " + usuario);
 
 
 
 //Crea un algoritmo utilizando un ciclo
-let articulo=prompt("Ingresa que articulo te gustaría y te diré su precio\nresaltador\ngoma\ncuaderno\nlapicera\nmarcador\nmicrofibras\nagenda(s- para salir)");
+let articulo=prompt("Ingresa que articulos te gustarían y te diré su precio\nresaltador\ngoma\ncuaderno\nlapicera\nmarcador\nmicrofibras\nagenda(s- para salir)");
 let precio=0;
 
 while(articulo!="s"){
     switch(articulo){
 
-        case "resaltador":
-            console.log ("Un resaltador Trabi sale $80") ;
-            precio=precio+80
-            break;
+            case "resaltador":
+            case "RESALTADOR":
+                console.log ("Un resaltador Trabi sale $80") ;
+                precio=precio+80
+                break;
             case "goma":
+            case "GOMA":
+
                 console.log ("Una goma sale $50") ;
                 precio=precio+50
                 break;  
@@ -61,6 +46,10 @@ while(articulo!="s"){
     }
     articulo=prompt("Ingresa el articulo que te gustaría y te diré su precio (s-para salir)");
 }
-console.log("Total a pagar $"+precio);
+alert("Total a pagar $"+precio);
 
+//calcular el total con iva de los productos cargados al carrito
+
+const iva=(precio)=> precio*1.21;
+alert(iva(parseFloat(prompt("Ingrese el total de su lista de compras para calcular precio con iva incluido :$"))));
 
