@@ -7,49 +7,133 @@ alert( "Bienvenido/a a nuestra tienda " + usuario);
 
 
 
-//Crea un algoritmo utilizando un ciclo
-let articulo=prompt("Ingresa que articulos te gustarían y te diré su precio\nresaltador\ngoma\ncuaderno\nlapicera\nmarcador\nmicrofibras\nagenda(s- para salir)");
-let precio=0;
 
-while(articulo!="s"){
-    switch(articulo){
+//carrito
+const libreria=[
+    {
+        articulo:"Resaltador Trabi",
+        seccion:"Marcadores",
+        precio: 70
+    },
+    {
+        articulo:"Resaltador Filgo TextMArket",
+        seccion:"Marcadores",
+        precio: 90
+    },
+    {
+        articulo:"Resaltador Trabi texting x6",
+        seccion:"Marcadores",
+        precio: 350
+    },
+    {
+        articulo:"Resaltador Filgo Fine Ligther x 1",
+        seccion:"Marcadores",
+        precio: 60
+    },
+    {
+        articulo:"Marcadores Duo brush",
+        seccion:"Marcadores",
+        precio: 150
+    },
+    {
+        articulo:"Marcadores Filgo metalizados x4",
+        seccion:"Marcadores",
+        precio: 700
+    },
+    {
+        articulo:"Lapices de colores Filgox 12",
+        seccion:"Lapices, lapiceras y mas",
+        precio: 200
+    },
+    {
+        articulo:"Lapiz filgo pastel color negro x1",
+        seccion:"Lapices, lapiceras y mas",
+        precio: 50
+    },
+    {
+        articulo:"Cuaderno a4 Escolar",
+        seccion:"Cuadernos",
+        precio: 700
+    },
+    {
+        articulo:"Cuaderno a5 Inkdrop",
+        seccion:"Cuadernos",
+        precio: 550
+    },
+    {
+        articulo:"Cuaderno ABC x100hjs",
+        seccion:"Cuadernos",
+        precio: 1100
+    },
+    {
+        articulo:"Cuaderno A4 Triunfante 1 2 3 x 100hs",
+        seccion:"Cuadernos",
+        precio: 750
+    },
+    {
+        articulo:"Anotador tapa pastel",
+        seccion:"Cuadernos",
+        precio: 120
+    },
+    {
+        articulo:"Cuaderno chico tapa dura",
+        seccion:"Cuadernos",
+        precio: 300
+    },
+    
+];
+for(const libr of libreria){
+    console.log(libr.articulo);
+    console.log(libr.precio)
+   }
 
-            case "resaltador":
-            case "RESALTADOR":
-                console.log ("Un resaltador Trabi sale $80") ;
-                precio=precio+80
-                break;
-            case "goma":
-            case "GOMA":
 
-                console.log ("Una goma sale $50") ;
-                precio=precio+50
-                break;  
-            case "cuaderno":
-                console.log ("Un cuaderno sale $700") ;
-                precio=precio+700
-                break;  
-            case "lapicera":
-                console.log ("Una lapicera sale $50") ;
-                precio=precio+50
-                break;
-            case "microfibras":
-                console.log ("Una microfibras sale $90") ;
-                precio=precio+90
-                break;
-            case "agenda":
-                console.log ("Una agenda sale $580") ;
-                precio=precio+580
-                break;       
-                          
-            default:console.log("Ese producto no esta en stock");
+const Juguetes=[
+    {
+        articulo:"Camion mega San Remo",
+        seccion:"Dia del niño",
+        precio: 4000
+    },
+    {
+        articulo:"Cocinita Gigante Fiorella",
+        seccion:"Dia del niño",
+        precio: 5000
+    },
+    {
+        articulo:"Tocsdor Gigante Fiorella",
+        seccion:"Dia del niño",
+        precio: 4800
+    },
+    {
+        articulo:"Excavadora San Remo",
+        seccion:"Dia del niño",
+        precio: 3000
     }
-    articulo=prompt("Ingresa el articulo que te gustaría y te diré su precio (s-para salir)");
+]
+
+
+     for(const jug of Juguetes){
+     console.log(jug.articulo);
+     console.log(jug.precio)
+    }
+
+const Carrito=libreria.concat(Juguetes);
+
+let buscarArticuloLib=prompt("Ingresa el articulo de libreria que deseas buscar, si no es de libreria ingresa un punto ");
+for (const libr of libreria){
+    if (libr.articulo == buscarArticuloLib){
+     let ArticuloBuscado=libreria.indexOf(libr);
+
+     alert("El articulo que esta buscando se encuentra en el orden "+ ArticuloBuscado + "de Libreria");
+
+    }
 }
-alert("Total a pagar $"+precio);
+ let buscarArticuloJug=prompt("Ingresa el articulo de Jugueteria que deseas buscar");
+for (const jug of Juguetes){
+    if (jug.articulo == buscarArticuloJug){
+     let ArticuloBuscado=Juguetes.indexOf(jug);
 
-//calcular el total con iva de los productos cargados al carrito
+     alert("El articulo que esta buscando se encuentra en el orden "+ ArticuloBuscado + " de Jugueteria");
 
-const iva=(precio)=> precio*1.21;
-alert(iva(parseFloat(prompt("Ingrese el total de su lista de compras para calcular precio con iva incluido :$"))));
-
+    }
+}
