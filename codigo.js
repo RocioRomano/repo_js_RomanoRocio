@@ -137,3 +137,23 @@ for (const jug of Juguetes){
 
     }
 }
+ libreria.forEach((artLibreria)=>console.log(artLibreria.articulo));
+
+ //FIND
+ let ingreseSuBusqueda=prompt("Que articulo desea buscar?")
+ let busqueda = libreria.find((el)=>el.articulo === ingreseSuBusqueda);
+ alert(busqueda);
+
+
+     if(busqueda != undefined){
+         alert("El articulo se encuentra en stock");
+         alert(busqueda);
+     }
+     else{
+         alert("El articulo ingresado no se encuentra en stock");
+     }
+
+  //FILTRO LA LIBRERIA CON PRECIOS MENORES QUE EL MONTO INGRESADO
+ let filtroDeBusqueda=parseInt(prompt("Ingrese un monto que desee no superar por articulo"));
+ const filtroMaximo=libreria.filter((libreria)=>libreria.precio<=filtroDeBusqueda);
+ alert(filtroMaximo);
