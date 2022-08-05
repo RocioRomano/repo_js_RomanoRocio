@@ -1,0 +1,11 @@
+#nav-link{
+    color:rgb(187, 32, 187);
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: 600;
+    font-style: normal;
+    transition: 0.3 ease all;
+    &:hover{
+        color:rgb(105, 184, 248);
+    }
+}

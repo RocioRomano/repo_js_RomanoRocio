@@ -1,0 +1,52 @@
+.card.coloreado{
+  background-color:rgba(255, 255, 255,0.7);
+}
+
+.card{
+    &-publicidad{
+      color:purple;
+    background-color:white;
+    font-family: Roboto;
+    font-weight: 600;
+    transition: .2s ease all;
+  }
+    &-publicidad:hover{
+    background-color:rgba(221, 226, 255) ;
+  }
+    &-img-top-catalogo{
+      height:300px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    opacity: 1;
+    transition: .2s ease all;
+    }
+    &-img-top{
+      opacity: 1;
+      transition: .2s ease all;
+    }
+    &-img-top:hover{
+    opacity: 0.8;
+    }
+       
+        &-title{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+&-catalogo{
+  color:purple;
+  background-color:white;
+  font-family: Roboto;
+  font-weight: 600;
+  transform: scale(1,1);
+  transition: 0.3s ease all;
+}
+&-catalogo:hover{
+  transform: scale(1.1,1.1);
+
+}
+
+
+    }
+    

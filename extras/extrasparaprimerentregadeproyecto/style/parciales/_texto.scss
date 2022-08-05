@@ -1,0 +1,47 @@
+.texto{
+color: map-get($map:$colores, $key:purpura );
+ font-weight: 500;
+ font-size: large;
+   &-titulo{
+    color: map-get($map:$colores, $key:purpura );
+    font-weight: 700;
+    font-size: x-large;
+  
+   }
+   &-mediano-footer{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: map-get($map: $colores, $key:violeta );
+
+   }
+   &-chico-footer{
+    font-size: 1rem;
+    font-weight: 600;
+    color: map-get($map: $colores, $key:violeta);}
+    &-chico-body{
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: map-get($map: $colores, $key:purpura );}
+
+
+    &-mediano-body{
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: map-get($map: $colores, $key:purpura );}
+      &-grande-body{
+        font-size: 2.3rem;
+        font-weight: 700;
+        color: map-get($map: $colores, $key:purpura );
+      }
+      &-chico-form{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: map-get($map: $colores, $key:purpura);
+      }
+      &-mediano-nav{
+        font-size: 1.5rem;
+      color: map-get($map: $colores, $key:purpura );
+    }
+  }
+      
+

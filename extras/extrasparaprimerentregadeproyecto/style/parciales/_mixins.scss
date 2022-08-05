@@ -1,0 +1,10 @@
+@mixin carta {
+    width:17em;
+    height: 300px;
+    background-color: map-get($map:$colores, $key:celeste );
+    border-radius: 16px;
+}
+@mixin nodeco {
+    text-decoration: none;
+    list-style: none;
+}
